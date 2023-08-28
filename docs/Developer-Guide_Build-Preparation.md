@@ -1,9 +1,11 @@
 # Building Armbian
 
+The Armbian build environment has had a major facelift. A lot has changed, like for instance now you can build on your ARM64 SBC with Armbian Jammy where you used to need an X86/AMD64 machine to cross-compile.
+
 ## What do I need?
 
-- x86/x64 machine running any OS; at least 4G RAM, SSD, quad core (recommended),
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**
+- x86/x64 machine running either Linux, Windows or MacOS. Or a powerful ARM64 SBC running Armbian Jammy with at least 4-cores and adviced 4GB memory or higher. ARM Mac devices can also be used with docker.
+- For Windows you can use WSL2 with the default Ubuntu installation. For MacOS both X86/AMD64 and ARM you need Docker. On Linux best to use a Ubuntu based distro Jammy (22.04) (or later, but not officially supported).
 - **The officially supported** compilation environment is [Ubuntu Jammy 22.04.x amd64](https://www.releases.ubuntu.com/jammy/ubuntu-22.04.2-live-server-amd64.iso) **only!**
   - Ubuntu Focal can be used for building Bionic, Focal and Buster images as well, unsupported though
 - `binfmt_misc` kernel module (some *ubuntu-cloud* images do not have this module.  Switch to a generic kernel if that is the case.)
@@ -11,11 +13,6 @@
 - no spaces in full path to the build script location allowed
 - superuser rights (configured `sudo` or root shell).
 
-Not officially supported build environments from community contributions:
-
-- Setting up VirtualBox and compile environment is easy following our [Vagrant tutorial](https://docs.armbian.com/Developer-Guide_Using-Vagrant/),
-- [Docker](Developer-Guide_Building-with-Docker.md) environment is also supported for building kernels and full OS images,
-- [Multipass](https://gist.github.com/atomic77/7633fcdbf99dca80f31fd6d64bfd0565)
 
 Please note that system requirements (both hardware and OS/software) may differ depending on the build environment (Vagrant, Docker, Virtualbox, native).
 
