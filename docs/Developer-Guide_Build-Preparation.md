@@ -2,9 +2,10 @@
 
 ## What do I need?
 
-- x86/x64 machine running any OS; at least 4G RAM, SSD, quad core (recommended),
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or similar virtualization software **(highly recommended with a minimum of 25GB hard disk space for the virtual disk image)**
-- **The officially supported** compilation environment is [Ubuntu Jammy 22.04.x amd64](https://www.releases.ubuntu.com/jammy/ubuntu-22.04.2-live-server-amd64.iso) **only!**
+- x86/x64 machine running any OS or an ARM64 board with Jammy, at least 4G RAM, SSD, quad core (recommended),
+- For Windows users you can use WSL2. (https://www.youtube.com/watch?v=ha-YtbUC-Wk)
+- Other than Jammy or Windows OS'es can use Docker or VirtualBox or something simular.
+- **The officially supported** compilation environment is [Ubuntu Jammy 22.04.x amd64](https://www.releases.ubuntu.com/jammy/ubuntu-22.04.2-live-server-amd64.iso) or an Armbian Jammy ARM64 image **only!**
   - Ubuntu Focal can be used for building Bionic, Focal and Buster images as well, unsupported though
 - `binfmt_misc` kernel module (some *ubuntu-cloud* images do not have this module.  Switch to a generic kernel if that is the case.)
 - installed basic system, OpenSSH and Samba (optional)
